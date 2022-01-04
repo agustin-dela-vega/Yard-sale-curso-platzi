@@ -23,13 +23,89 @@
             font-family: 'Quicksand', sans-serif;
             margin: 0;
         }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: 60px;
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .menu{
+            display: none;
+        }
+        .logo {
+            width: 130px;
+        }
+        .navbar-left ul,
+        .navbar-right ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        .navbar-left{
+        display: flex;
+        }
+        .navbar-left ul{
+        margin-left: 12px;
+        }
+
+        .navbar-left ul li a,
+        .navbar-right ul li  {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .navbar-left ul li a:hover,
+        .navbar-right ul li:hover  {
+            color: var(--hospital-green);
+            border: 1px solid var(--hospital-green);
+        }
+        .navbar-email{
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+        }
+        .navbar-shopping-cart div{
+            width: 16px;
+            height: 16px;
+            background-color: var(--hospital-green);
+            border-radius: 50%;
+            font-size: var(--sm);
+            color: var(--black);
+            font-weight: bold;
+            position: absolute;
+            top: 1px;
+            right: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-shopping-cart {
+            position: relative;
+        }
+        @media (max-width: 789px) {
+            .menu {
+                display: block;
+                width: 30px;
+            }
+            .navbar-left ul {
+                display: none;
+            }
+            .navbar-email {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
         <img src="./icons/icon_menu.svg" alt="menu" class="menu">
         <div class="navbar-left">
-            <img src="./logos/logo_yard_sale.svg" alt="logo yardSale">
+            <img class="logo" src="./logos/logo_yard_sale.svg" alt="logo yardSale">
             <ul>
                 <li>
                     <a href="/">All</a>
@@ -53,11 +129,13 @@
             </ul>
         </div>
         <div class="navbar-right">
-            <li>agustin@delavega.cl</li>
-            <li class="navbar-shopping-cart">
-                <img src="./icons/icon_shopping_cart.svg" alt="shoping cart">
-            </li>
-            <div>2</div>
+            <ul>
+                <li class="navbar-email"> agustin@delavega.cl</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./icons/icon_shopping_cart.svg" alt="shoping cart">
+                    <div>2</div>
+                </li>
+            </ul>
         </div>
     </nav>
 </body>
